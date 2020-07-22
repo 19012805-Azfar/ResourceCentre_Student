@@ -83,7 +83,28 @@ public class ResourceCentreTest {
 		//fail("Not yet implemented");
 		// write your code here
 		// TBD by Andi
+		assertNotNull("Test if there is valid Camcorder arraylist to add to", chromebookList);
+		String allChromebook= ResourceCentre.retrieveAllChromebook(chromebookList);
+		String testOutput = "";
+		assertEquals("Check that ViewAllChromebooklist", testOutput, allChromebook);
+		
+		ResourceCentre.addChromebook(chromebookList, cb1);
+		ResourceCentre.addChromebook(chromebookList, cb2);
+		assertEquals("Test if that Chromebook arraylist size is 2?", 2, chromebookList.size());
+		
+		allChromebook= ResourceCentre.retrieveAllChromebook(chromebookList);
+		
+		testOutput = String.format("%-10s %-30s %-10s %-10s %-20s\n","CB0011", "My Google Chromebook 1st", "Yes", "", "Mac OS");
+		testOutput += String.format("%-10s %-30s %-10s %-10s %-20s\n","CB0012", "SAMSUNG Chromebook 4+", "Yes", "", "Win 10");
+	
+		assertEquals("Check that ViewAllChromebooklist", testOutput, allChromebook);
+		
+		
+		
+		
+		
 	}
+	
 
 	@Test
 	public void doLoanCamcorderTest() {
