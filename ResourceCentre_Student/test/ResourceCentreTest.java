@@ -95,6 +95,9 @@ public class ResourceCentreTest {
 	public void doLoanChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		//changed by Jadon
+		ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "23-4-2021");
+		assertTrue(true);
 	}
 	
 	@Test
