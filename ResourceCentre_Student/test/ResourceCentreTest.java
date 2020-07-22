@@ -131,7 +131,7 @@ public class ResourceCentreTest {
 	@Test
 	public void doReturnChromebookTest() {
 		//fail("Not yet implemented");
-		//By Azfar
+		// By Azfar
 		assertNotNull("Is the list of Chromebooks available?", chromebookList);
 		ResourceCentre.addChromebook(chromebookList, cb1);
 		ResourceCentre.addChromebook(chromebookList, cb2);
